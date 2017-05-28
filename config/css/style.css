@@ -1,0 +1,50 @@
+body {font-family:Arial, Helvetica, sans-serif;max-width: auto;text-align: center;}
+a {text-decoration: none}
+a:hover {text-decoration: underline; color: red}
+.form{width: 600px;}
+.form h2 {margin-bottom: 20px;}
+.form h2 span {font-size: 30px;}
+.form h2 span {font-size: 30px; color: blue;}
+.form p {margin-top: 0px;}
+.form fieldset {margin-bottom: 15px;padding: 10px;border: solid;}
+.form legend {padding: 0px 3px;font-weight: bold;font-variant: small-caps;}
+.form label {width: 210px;display: inline-block;vertical-align: top;margin: 6px;text-align: right;}
+.form label span{font-size: 10px;color: darkgray;}
+.form label span  strong {font-size: 10px;color: darkblue;}
+.form label:disabled {color: rgb(235, 235, 228); }
+.form em {font-weight: bold;font-style: normal;color: #f00;}
+.form input:focus {background: #eaeaea;}
+
+.form input, textarea {width: 254px;}
+.form textarea {height: 100px;}
+.form select {width: 553px;}
+.form select:disabled {background: rgb(235, 235, 228);}
+.form input[type=checkbox] {width: 10px;}
+.form input[type=submit] {width: 170px;padding: 10px;}
+.form input[type=submit]:hover {width: 170px;padding: 10px;background-color: red;color: white;}
+.ok {color: red;}
+.nologin {color: red;}
+.exit{position: fixed;top: 20px;right: 50px;}
+.save{position: fixed;top: 50px;right: 20px;}
+.button25 {
+  position: relative;
+  display: inline-block;
+  width: 10em;
+  height: 2.5em;
+  line-height: 2.5em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #777;
+  color: #fff;
+  outline: none;
+  border: 2px solid #F64C2B;
+  border-radius: 5px;
+  box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
+  background: linear-gradient(#FB9575, #F45A38 48%, #EA1502 52%, #F02F17);
+}
+.button25:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
