@@ -33,12 +33,12 @@ if ($_FILES["upsel_pic"]["name"]!="") move_uploaded_file($_FILES["upsel_pic"]["t
 	
 	//echo("{$key} = {$value}<br>");
 	
-	if (stripos($key, "64")) $value_save=base64_encode($value); else $value_save=config($value);
+	if (stripos($key, "64")) {$value_save=base64_encode($value); $value=base64_encode($value);} else $value_save=config($value);
 	
 	if (($key=="contact_email") AND ($value=="")) $value=$_POST['email'];
   
 		//$s="$".$key." = "."'{$value_save}';\n";
-		$s="$".$key." = \"".$value_save."\";\n";
+		$s="$".$key." = \"".$value."\";\n";
 		$s2="$".$key." = \"".$value_save."\";\n";
         //echo("{$key} = {$value_save}<br>");
 	$text.=$s; 
