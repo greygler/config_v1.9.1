@@ -7,12 +7,12 @@
 <script> var ip = "<?= $remote_addr ?>";</script> <!-- Устанавливаем IP посетителя -->
 
 
-<?= $head_index ?> <!-- Блок счетчиков head -->
+<?= base64_decode($head_index) ?> <!-- Блок счетчиков head -->
 
 </head>
 <body>
 
-<?= $body_index  ?> <!-- Блок счетчиков body -->
+<?= base64_decode($body_index)  ?> <!-- Блок счетчиков body -->
 
 Телефоны продавца
 <p><?= $contact_phone1 ?></p>

@@ -33,10 +33,10 @@
             .success {text-align: center;}
 			.red {color: red;}
         </style>  
-<?= base64_decode($head_thanks) ?>		
+<?= base64_decode($head_thanks64) ?>		
     </head>
     <body>
-<?= base64_decode($body_thanks) ?>
+<?= base64_decode($body_thanks64) ?>
         <div class="block_success">	
 <div class="ok success"> &#10004;</div>		
             <h2 style="text-transform: uppercase;">Поздравляем! Ваш заказ принят!</h2>

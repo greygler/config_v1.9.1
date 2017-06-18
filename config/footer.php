@@ -1,4 +1,4 @@
-﻿<?= $body_index  ?>
+﻿<?= base64_decode($body_index64)  ?>
 <script>
 $(document).ready(function(){
 <? if ($mask_phone!="-"){ ?>
@@ -7,9 +7,7 @@ $('<script src="config/js/mask<?= $mask_phone ?>.js">').appendTo('head');
 <? } ?>
 $('<script src="config/js/geobase.js">').appendTo('head');
 
-<? if ($head_index!=""){ ?>
-('<?= $head_index ?>').appendTo('head');
-<? } ?>
+
 });
 
 </script> 
@@ -126,7 +124,7 @@ $(function () {
 <div id="kmacb-form" class="modal">
     <div class="modal-block">
         <div class="icon-close"></div>
-        <div class="title_modal"><?= $modal_title ?></div>
+        <div class="title"><?= $modal_title ?></div>
         <div class="content">
             <div class="padding">
                 <p><?= $modal_text ?></p>
