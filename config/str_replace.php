@@ -2,7 +2,8 @@
 function config($str)
 	{
 		include("value.php");
-			$str = str_replace('"', '\"', $str);
+			$str = str_replace(' "', ' &#171;', $str);
+			$str = str_replace('" ', '&#187; ', $str);
 			$str = str_replace("%product%", '{$product}', $str);
 			$str = str_replace("%valuta%", '{$valuta}', $str);
 			$str = str_replace("%price_new%", '{$price_new}', $str);

@@ -2,7 +2,7 @@
 /* * * * * * * * * * * * * * * * * * * * * * * 
  *  Configuration v.1.9.1 for LandingPage:   *
  *               confugurator                *
- *   Last edition by 28.05.2017, 01:29:22    *
+ *   Last edition by 18.06.2017, 11:28:21    *
  * * * * * * * * * * * * * * * * * * * * * * */
 
 session_start();
@@ -28,18 +28,16 @@ $price_new = "599";
 $price_old_select = "1";
 $skidka = "53";
 $mask_phone = "_ua";
-$head_index = "";
-$head_thanks = "";
-$body_index = "";
-$body_thanks = "";
+$head_index64 = "";
+$head_thanks64 = "";
+$body_index64 = "";
+$body_thanks64 = "";
 $product = "Наименование продукта";
 $email = "Ваш_email";
-$sender = "{$product} <noreply@{$_SERVER['HTTP_HOST']}>";
-$subject = "Заказ товара - {$product}";
+$sender = "Наименование продукта <noreply@confugurator>";
+$subject = "Заказ товара - Наименование продукта";
 $comment = "";
-$message = "<table border=\"0\"><td colspan=\"2\" height=\"40\" ><p align=\"center\"><i>Информация о покупателе:</i></td></tr><tr><td><b>IP покупателя:</b></td><td>{$remote_addr}</td></tr><tr><td><b>Страна (по IP):</b></td><td> {$country_code}</td></tr>
-<tr><td><b>Город (по IP):</b></td><td> {$_POST['city']}</td></tr><tr><td><b>Установленный язык:</b> </td><td>{$_SERVER['HTTP_ACCEPT_LANGUAGE']}</td></tr><tr><td><b>Браузер: </b> </td><td>{$browser}</td></tr><tr><td><b>Устройство:</b></td><td>{$device}</td></tr><tr><td><b>ОС:</b></td><td>{$os}</td></tr><tr><td><b>Реферер:</b></td><td>{$_SESSION['referer']}</td></tr><tr><td colspan=\"2\"><p align=\"center\"><b>UTM-метки: </b></p> </tr>{$utm}</tr><tr><td><b>Комментарий к заказу:  </b></td><td><p>{$comment}</p></td></tr></table>
-";
+$message64 = "";
 $seller = "ООО «Рога и копыта»,  ОГРН 458788856458";
 $seller_adress = "г. Мухосральск, ул. Веселых Тараканов,  д. 11 ";
 $contact_phone1 = "Телефон1";

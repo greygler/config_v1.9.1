@@ -68,9 +68,9 @@ function script3()
 	if (document.getElementById("upsel").value=='0') {
 		
 document.getElementById("upsel_title").disabled = true;
-document.getElementById("upsel_dir").disabled = true;
+//document.getElementById("upsel_dir").disabled = true;
 document.getElementById("upsel_pic").disabled = true;
-document.getElementById("upsel_pic_p").disabled = true;
+if (document.getElementById('upsel_pic_p')) document.getElementById("upsel_pic_p").disabled = true;
 document.getElementById("upsel_url").disabled = true;
 document.getElementById("upsel_url_title").disabled = true;
 document.getElementById("upsel_delay").disabled = true;
@@ -79,9 +79,9 @@ document.getElementById("upsel_pic_h").disabled = true;
 }
 else {
 document.getElementById("upsel_title").disabled = false;
-document.getElementById("upsel_dir").disabled = false;
+//document.getElementById("upsel_dir").disabled = false;
 document.getElementById("upsel_pic").disabled = false;
-document.getElementById("upsel_pic_p").disabled = false;
+if (document.getElementById('upsel_pic_p')) document.getElementById("upsel_pic_p").disabled = false;
 document.getElementById("upsel_url").disabled = false;
 document.getElementById("upsel_url_title").disabled = false;
 document.getElementById("upsel_delay").disabled = false;

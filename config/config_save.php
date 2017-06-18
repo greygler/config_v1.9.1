@@ -26,18 +26,21 @@ $text2.='if (Config::is_mobile()) $device="Мобильный"; else $device="С
 $text2.='$user_agent=$_SERVER[\'HTTP_USER_AGENT\'];'."\n";
 $text2.='$browser=Config::user_browser($user_agent);'."\n";
 $text2.='$os=Config::getOS($user_agent);'."\n\n";
-if ($_FILES["upsel_pic"]["name"]!="") move_uploaded_file($_FILES["upsel_pic"]["tmp_name"], "../".$_POST['upsel_dir']."/".$_FILES["upsel_pic"]["name"]);
+if ($_FILES["upsel_pic"]["name"]!="") move_uploaded_file($_FILES["upsel_pic"]["tmp_name"], "upsel_img/".$_FILES["upsel_pic"]["name"]);
 
  foreach($_POST as $key => $value) {
-	$value = str_replace("'", "\'", $value);
+	//$value = str_replace("'", "\'", $value);
 	
+	//echo("{$key} = {$value}<br>");
+	
+	if (stripos($key, "64")) $value_save=base64_encode($value); else $value_save=config($value);
 	
 	if (($key=="contact_email") AND ($value=="")) $value=$_POST['email'];
   
-		$s="$".$key." = "."'{$value}';\n";
-		$s2="$".$key." = \"".config($value)."\";\n";
-
-
+		//$s="$".$key." = "."'{$value_save}';\n";
+		$s="$".$key." = \"".$value_save."\";\n";
+		$s2="$".$key." = \"".$value_save."\";\n";
+        //echo("{$key} = {$value_save}<br>");
 	$text.=$s; 
 	$text2.=$s2;
 }

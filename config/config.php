@@ -41,10 +41,10 @@ if (file_exists($filename)) include ($filename);
   </fieldset>
   <fieldset>
   <legend><h2>&#160;<i class="fa fa-code"></i>&#160;Коды:&#160;</h2></legend>
-	 <label for="head_index">Блок head для Index:<span><br>Код для размещения в тегах<br><strong>&#8249;head&#8250; Ваш код &#8249;&#47;head&#8250;</strong><br>индексной страницы<br>Здесь размещают пиксели, META-теги, ссылки на JS для аналитики и пр.</span></label><textarea rows="5" id="head_index" name="head_index" cols="70"><?= str_replace("<br />", "\n", $head_index); ?></textarea></p>
-	 <label for="head_thanks">Блок head для Thanks: <span><br>Код для размещения в тегах<br><strong>&#8249;head&#8250; Ваш код &#8249;&#47;head&#8250;</strong><br>страницы "Спасибо"<br>Здесь размещают пиксели, META-теги, ссылки на JS для аналитики и пр.</span></label><textarea rows="5" id="head_thanks" name="head_thanks" cols="70"><?= str_replace("<br />", "\n", $head_thanks); ?></textarea></p>
-	 <label for="body_index">Блок body для Index: <span><br>Код для размещения в тегах<br><strong>&#8249;body&#8250; Ваш код &#8249;&#47;body&#8250;</strong><br>индексной страницы<br>Здесь можно разместить код ретаргетинга, счетчиков Яндекс, Вконтакте, Mail-ru, Google-аналитику</span></label><textarea rows="5" id="body_index" name="body_index" cols="70"><?= str_replace("<br />", "\n", $body_index); ?></textarea></p>
-	 <label for="body">Блок body для Thanks: <span><br>Код для размещения в тегах<br><strong>&#8249;body&#8250; Ваш код &#8249;&#47;body&#8250;</strong><br>страницы "Спасибо"<br>Здесь можно разместить код ретаргетинга, счетчиков Яндекс, Вконтакте, Mail-ru, Google-аналитику</span></label><textarea rows="5" id="body_thanks" name="body_thanks" cols="70"><?= str_replace("<br />", "\n", $body_thanks); ?></textarea></p>
+	 <label for="head_index64">Блок head для Index:<span><br>Код для размещения в тегах<br><strong>&#8249;head&#8250; Ваш код &#8249;&#47;head&#8250;</strong><br>индексной страницы<br>Здесь размещают пиксели, META-теги, ссылки на JS для аналитики и пр.</span></label><textarea rows="5" id="head_index64" name="head_index64" cols="70"><?= str_replace("<br />", "\n", base64_decode($head_index64)); ?></textarea></p>
+	 <label for="head_thanks64">Блок head для Thanks: <span><br>Код для размещения в тегах<br><strong>&#8249;head&#8250; Ваш код &#8249;&#47;head&#8250;</strong><br>страницы "Спасибо"<br>Здесь размещают пиксели, META-теги, ссылки на JS для аналитики и пр.</span></label><textarea rows="5" id="head_thanks64" name="head_thanks64" cols="70"><?= str_replace("<br />", "\n", base64_decode($head_thanks64)); ?></textarea></p>
+	 <label for="body_index64">Блок body для Index: <span><br>Код для размещения в тегах<br><strong>&#8249;body&#8250; Ваш код &#8249;&#47;body&#8250;</strong><br>индексной страницы<br>Здесь можно разместить код ретаргетинга, счетчиков Яндекс, Вконтакте, Mail-ru, Google-аналитику</span></label><textarea rows="5" id="body_index64" name="body_index64" cols="70"><?= str_replace("<br />", "\n", base64_decode($body_index64)); ?></textarea></p>
+	 <label for="body_thanks64">Блок body для Thanks: <span><br>Код для размещения в тегах<br><strong>&#8249;body&#8250; Ваш код &#8249;&#47;body&#8250;</strong><br>страницы "Спасибо"<br>Здесь можно разместить код ретаргетинга, счетчиков Яндекс, Вконтакте, Mail-ru, Google-аналитику</span></label><textarea rows="5" id="body_thanks64" name="body_thanks64" cols="70"><?= str_replace("<br />", "\n", base64_decode($body_thanks64)); ?></textarea></p>
 	 
 	  <!--	 Дополнительная переменная в разделе КОДЫ -->
 	  </fieldset> 
@@ -59,7 +59,7 @@ if (file_exists($filename)) include ($filename);
 	 
     <label for="comment">Комментарий: <span><br>(%comment%), Комментарий к заказу, который автоматически добавится в письмо о покупке<br>А также добавлен в Вашу СРМ систему, (Если ленд подключен) </span></label><textarea rows="5" id="comment" name="comment" cols="70"><?= str_replace("<br />", "\n", $comment); ?></textarea></p>
 	
-	<label for="message">Текст письма: <span><br>Текст письма, который будет добавлен к оповещению о покупателе.<br>Может содержать дополнительные переменные.<br><strong>Инструкция в документации</strong></label><textarea rows="5" id="message" name="message" cols="70"><?= str_replace("<br />", "\n", $message); ?></textarea></p>
+	<label for="message64">Текст письма: <span><br>Текст письма, который будет добавлен к оповещению о покупателе.<br>Может содержать дополнительные переменные.<br><strong>Инструкция в документации</strong></label><textarea rows="5" id="message" name="message64" cols="70"><?= str_replace("<br />", "\n", base64_decode($message64)); ?></textarea></p>
 	 <!--	 Дополнительная переменная в разделе Отправка информации о покупке -->
   </fieldset> 
   
@@ -173,18 +173,18 @@ if ($button=="") echo "ПЕРЕЗВОНИТЬ МНЕ"; else echo $button;	  ?>" 
 	
 	<label for="upsel_title">Заголовок допродажи: </label><input id="upsel_title" <? if ($upsel!='1') echo ("disabled") ?> type="text" name="upsel_title" value="<? if ($upsel_title=="") echo "C {$product} обычно покупают"; else echo $upsel_title;	  ?>" placeholder="Заголовок допродажи">
 	
-	<label <? if ($upsel!='1') echo ("disabled") ?> for="upsel_dir">Каталог для размещения: </label>
-	  <select id="upsel_dir" name="upsel_dir" <? if ($upsel!='1') echo ("disabled") ?> >
+	<!-- <label <? if ($upsel!='1') echo ("disabled") ?> for="upsel_dir">Каталог для размещения: </label>
+	  <select id="upsel_dir" name="upsel_dir" <? if ($upsel!='1') echo ("disabled") ?> > -->
 	
 <?	
-$dir = ".."; $dh  = opendir($dir); while (false !== ($filename = readdir($dh))) { $files[] = $filename; } sort($files); 
-foreach ($files as $key => $value) if ((is_dir ( $value )) AND ($value!=".")  AND ($value!="..")) echo ("<option value=\"{$value}\">{$value}</option>");
+//$dir = ".."; $dh  = opendir($dir); while (false !== ($filename = readdir($dh))) { $files[] = $filename; } sort($files); 
+//foreach ($files as $key => $value) if ((is_dir ( $value )) AND ($value!=".")  AND ($value!="..")) echo ("<option value=\"{$value}\">{$value}</option>");
 ?>
 
  </select>
  <label for="upsel_pic">Картинка: </label>
  <input id="upsel_pic" <? if ($upsel!='1') echo ("disabled") ?> type="file" name="upsel_pic" accept="image/*" size="20" <? if ($upsel_pic=="") echo ("required") ?> >
- <? if (($upsel_pic!="") AND ($upsel_dir!="")) {echo ("<p id=\"upsel_pic_p\" ");  if ($upsel!='1') echo ("disabled"); echo(">Выбранная картинка:<br><img width=\"100\" src=\"../{$upsel_dir}/{$upsel_pic}\"></p>\n<input type=\"hidden\" name=\"upsel_pic\" value=\"{$upsel_pic}\"><br>" ); } ?>
+ <? if ($upsel_pic!="")  {echo ("<p id=\"upsel_pic_p\" ");  if ($upsel!='1') echo ("disabled"); echo(">Выбранная картинка:<br><img width=\"100\" src=\"upsel_img/{$upsel_pic}\"></p>\n<input type=\"hidden\" name=\"upsel_pic\" value=\"{$upsel_pic}\"><br>" ); } ?>
 
  <label for="upsel_pic_h">Высота картинки: </label><input <?if ($upsel!='1') echo ("disabled") ?> id="upsel_pic_h" type="text" name="upsel_pic_h" value="<? if ($upsel_pic_h=="") echo "150"; else echo $upsel_pic_h;	  ?>" placeholder="Высота картинки">
  

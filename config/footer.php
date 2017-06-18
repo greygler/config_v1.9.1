@@ -126,7 +126,7 @@ $(function () {
 <div id="kmacb-form" class="modal">
     <div class="modal-block">
         <div class="icon-close"></div>
-        <div class="title"><?= $modal_title ?></div>
+        <div class="title_modal"><?= $modal_title ?></div>
         <div class="content">
             <div class="padding">
                 <p><?= $modal_text ?></p>
